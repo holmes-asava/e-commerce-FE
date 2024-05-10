@@ -12,6 +12,11 @@ jobs:
       - checkout
       # install dependencies
       - run:
+          name: Install new node version
+          command: 
+            nvm install 18.0.0
+            nvm use 18.0.0
+      - run:
           name: Install Dependencies
           command: npm install
       - run:
