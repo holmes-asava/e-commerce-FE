@@ -1,12 +1,8 @@
 import React from 'react';
-import { Container, Segment } from 'semantic-ui-react';
-
-export default function Home() {
+export default function Product() {
   return (
-    <Container >
-    <Segment>
+    <div>
     <a>Product</a>
-  </Segment>
-  </Container>
+    </div>
   )
 }

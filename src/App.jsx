@@ -1,37 +1,18 @@
-
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './page/Home'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './page/Home';
 import Product from './page/Product'
-import { Container, Grid, Input, Segment } from 'semantic-ui-react'
+import Login from './page/Login'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home/>,
-    children: [
-      {
-        path: '/product',
-        element: <Product />,
-      },
-      {
-        path: '/logiv',
-        element: <div>Page2</div>,
-      },
-    ],
-  },
-])
-
-
-export default function App() {
+const App = () => {
   return (
-    <div>
-      <RouterProvider router={router}></RouterProvider>
-      <Container style={{marginTop:20}}>
-    <div>asdasdas</div>
-      </Container>
-      <br></br>
-  
-    </div>
-  )
-}
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/product" element={<Product />} />
+      {/* <Route path="*" element={<NotFound />} /> */}
+    </Routes>
+  );
+};
 
+export default App;
