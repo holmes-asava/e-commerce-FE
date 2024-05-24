@@ -10,9 +10,9 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: npm
-      # - run:
-      #     command: yarn test
-      #     name: Run tests
+      - run:
+          command: npm install -g vite
+          name: Install vite
       - run:
           command: npm run build
           name: Build app
