@@ -11,8 +11,8 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: npm install -g vite
-          name: Install vite
+          command: npm install
+          name: Install
       - run:
           command: npm run build
           name: Build app
